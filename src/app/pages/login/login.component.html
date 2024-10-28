@@ -1,0 +1,17 @@
+<main>
+<div id="izquierda"></div>
+<div id="derecha">
+    <form>
+        <h1>¡Bienvenido a Parkify!</h1>
+        <img src= "https://img.freepik.com/vector-gratis/ilustracion-vector-diseno-grafico-estacionamiento_24908-54474.jpghttps://img.freepik.com/vector-gratis/ilustracion-vector-diseno-grafico-estacionamiento_24908-54474.jpg" class="img1" alt="Logotipo Parking">
+        <img src= "https://img.freepik.com/vector-gratis/ilustracion-vector-diseno-grafico-estacionamiento_24908-54474.jpghttps://img.freepik.com/vector-gratis/ilustracion-vector-diseno-grafico-estacionamiento_24908-54474.jpg" class="img2" alt="Logotipo Parking">
+        <label for="usuario">Usuario</label>
+        <input type="text" id="usuario" [(ngModel)]="datosLogin.username" name="usuario" placeholder="Usuario">
+        <label for="usuario">Contraseña</label>
+        <input type="password" id="usuario" [(ngModel)]="datosLogin.password" name="password" placeholder="Contraseña">
+        <button type="button" (click)="login()">Iniciar sesión</button> 
+        <button type="boton-registro" routerLink="['/registro']">Registrarse</button> 
+    </form>
+    <p class="parrafo-b">¡Prueba la app y disfruta de una experiencia de estacionamiento sin complicaciones!</p>
+</div>
+</main>

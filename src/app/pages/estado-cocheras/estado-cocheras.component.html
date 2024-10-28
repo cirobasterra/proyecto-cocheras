@@ -1,0 +1,83 @@
+<!-- <div id="header">
+    <h1>{{ titulo }}</h1>
+    <div class="user-actions">
+        <a [routerLink]="['/usurio']">👤</a>
+        <a [routerLink]="['/login']">Cerrar sesión</a>
+    </div>
+</div>   -->
+
+<app-header></app-header>
+
+<div class="boton-agregar">
+    <button (click)="agregarFila()" class="boton-resaltado" id="agregar">AGREGAR FILA</button>
+</div>
+
+<div id="tabla">
+    <div class="fila" id="header-tabla"> 
+        <div>{{ header.nro }}</div>
+        <div>{{ header.disponibilidad }}</div>
+        <div>{{ header.ingreso }}</div>
+        <div>{{ header.acciones }}</div>
+    </div>
+
+    <button (click)="abrirModalNuevoEstacionamiento(fila.id)" [disabled] = "fila.deshabilitada" *ngFor="let fila of filas; let i = index" class="fila">
+        <div>{{ fila.id }}</div>
+        <div [ngClass]="{disponible: !fila.deshabilitada, ocupado: fila.deshabilitada}"> {{ fila.deshabilitada ? 'No Disponible' : 'Disponible' }}</div>
+        <div>{{ fila.descripcion }}</div>   
+        <div>   
+            <button (click)="eliminarFila(i,$event)" class="boton-resaltado-2">Cerrar</button>
+            <button (click)="cambiarDisponibilidadCochera(i,$event)" class="boton-resaltado-3">🚫</button>
+        </div>
+    </button>
+</div>
+
+<!-- 
+    <div class="fila">
+        <div>1</div>
+        <div class="disponible">Disponible</div>
+        <div>-</div>
+        <div>🚫</div>
+    </div>
+    <div class="fila">
+        <div>2</div>
+        <div>AXX-246</div>
+        <div>01/01 10:43</div>
+        <div>🚫</div>
+    </div>
+    <div class="fila">
+        <div>3</div>
+        <div>AB-1274-CD</div>
+        <div>10:45</div>
+        <div>✔</div>
+    </div>
+    <div class="fila">
+        <div>4</div>
+        <div class="deshabilitada">Deshabilitada</div>
+        <div>Ayer 10:43</div>
+        <div>✔</div>
+    </div>
+    <div class="fila">
+        <div>5</div>
+        <div class="disponible">Disponible</div>
+        <div>-</div>
+        <div>🚫</div>
+    </div>
+    <div class="fila">
+        <div>6</div>
+        <div>AXX-246</div>
+        <div>01/01 10:43</div>
+        <div>🚫</div>
+    </div>
+    <div class="fila">
+        <div>7</div>
+        <div>AB-1274-CD</div>
+        <div>10:45</div>
+        <div>✔</div>
+    </div>
+    <div class="fila">
+        <div>8</div>
+        <div class="deshabilitada">Deshabilitada</div>
+        <div>Ayer 10:43</div>
+        <div>✔</div>
+    </div>
+-->

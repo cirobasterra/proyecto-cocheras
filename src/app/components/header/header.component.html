@@ -1,0 +1,11 @@
+<header id="header">
+    <h1>{{ titulo() }}</h1>
+    <nav class="user-actions">
+        <a [routerLink]="['/usuario']" routerLinkActive="activa">👤</a>
+        <a [routerLink]="['/login']" routerLinkActive="activa">Cerrar sesión</a>
+        @if (esAdmin) {
+        <a routerLink="['/reportes']" routerLinkActive="activa">Reportes</a>
+        <a [routerLink]="['Precios']" routerLinkActive="activa">Precios</a>
+        }
+    </nav>
+</header>
