@@ -3,6 +3,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { EstadoCocherasComponent } from './pages/estado-cocheras/estado-cocheras.component';
 import { inject } from '@angular/core';
 import { AuthService } from './services/auth.service';
+import { ReportesComponent } from './reportes/reportes/reportes.component';
 
 function guardaLogueado(){
   let auth = inject(AuthService);
@@ -20,13 +21,17 @@ function guardaLogueado(){
 export const routes: Routes = [
     {
         path: "login",
-        component: LoginComponent
-
+        component: LoginComponent,
     },
     {
         path: "estado-cocheras",
         component: EstadoCocherasComponent,
         canActivate:[guardaLogueado]
+    },
+    {
+        path: "reportes",
+        component: ReportesComponent,
+        canActivate: [guardaLogueado]
     },
     {
         path: "",

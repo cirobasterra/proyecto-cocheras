@@ -1,0 +1,40 @@
+main{
+    position: fixed; 
+    width: 100%;
+    height: 100%;
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    background: linear-gradient(to bottom, #051135, #3a3a3a);
+
+}
+
+tr{ 
+    text-align: center;
+    border-bottom: 3px solid black;
+}
+    
+thead{
+    background-color: #051135;
+    color:  #f0f0f0; 
+}
+    
+th{
+    padding: 15px 15px;
+}
+    
+
+.tabla{
+    background-color: #f0f0f0;
+    width: 52%;
+    margin: auto;
+    margin-top: 100px;
+    border-collapse: collapse; 
+    min-width: 450px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px; 
+}
+
+td{
+    padding: 20px;
+}
